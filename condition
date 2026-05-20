@@ -1,0 +1,12 @@
+secret_number = 7
+
+guess = int(input("Guess the number: "))
+
+if guess == secret_number:
+    print("Correct! You guessed the number.")
+
+elif guess < secret_number:
+    print("Too small! Try a bigger number.")
+
+else:
+    print("Too large! Try a smaller number.")

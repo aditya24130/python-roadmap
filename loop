@@ -1,0 +1,39 @@
+print("Numbers from 1 to 5:")
+
+for i in range(1, 6):
+    print(i)
+
+fruits = ["Apple", "Banana", "Mango"]
+
+print("\Fruit names:")
+
+for fruit in fruits:
+    print(fruit)
+----------
+
+count = 1
+
+print("\While loop:")
+
+while count <= 5:
+    print(count)
+    count += 1
+
+print("\Using break:")
+
+for number in range(1, 10):
+
+    if number == 5:
+        break   
+
+    print(number)
+
+print("\Using continue:")
+
+for number in range(1, 6):
+
+    if number == 3:
+        continue  
+
+    print(number)
+    
