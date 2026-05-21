@@ -1,21 +1,22 @@
 class Animal:
 
-        def __init__(self, name):
+    def __init__(self, name):
         self.name = name
 
-       def sound(self):
-       print("Animal makes a sound")
-       class Dog(Animal):
+    def sound(self):
+        print("Animal makes a sound")
+class Dog(Animal):
+    def __init__(self, name, breed):
+   
+        super().__init__(name)
 
-      def __init__(self, name, breed):
-      super().__init__(name)
+        self.breed = breed
 
-       self.breed = breed
-       def sound(self):
-       print("Dog barks")
-       d1 = Dog("Tommy", "Labrador")
+    def sound(self):
+        print("Dog barks")
 
-         print("Name:", d1.name)
-         print("Breed:", d1.breed)
+d1 = Dog("Tommy", "Labrador")
 
-         d1.sound()
+print("Name:", d1.name)
+print("Breed:", d1.breed)
+d1.sound()
