@@ -5,6 +5,7 @@ with open("input.txt", "r") as file:
 print("Using read():")
 print(content)
 
+
 with open("input.txt", "r") as file:
     lines = file.readlines()
 
