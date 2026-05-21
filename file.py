@@ -1,14 +1,10 @@
-
 with open("input.txt", "r") as file:
     content = file.read()
-
 print("Using read():")
 print(content)
 
-
 with open("input.txt", "r") as file:
     lines = file.readlines()
-
 print("\nUsing readlines():")
 print(lines)
 
