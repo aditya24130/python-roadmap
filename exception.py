@@ -1,12 +1,8 @@
 try:
-
     num = int(input("Enter a number: "))
-
-
     if num < 0:
         raise ValueError("Negative numbers are not allowed")
-
-
+        
     with open("input.txt", "r") as file:
         content = file.read()
 
