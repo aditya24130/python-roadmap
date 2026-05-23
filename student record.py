@@ -30,7 +30,6 @@ def save_students(students):
     with open(FILE_NAME, "w") as file:
         json.dump([student.to_dict() for student in students], file, indent=4)
 
-
 def add_student(students):
     try:
         name = input("Enter name: ")
