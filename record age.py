@@ -20,20 +20,16 @@ def load_students():
 
     try:
         with open(FILE_NAME, "r") as file:
-
             data = json.load(file)
-
             return [Student(**student) for student in data]
 
     except FileNotFoundError:
         return []
-
     except json.JSONDecodeError:
         print("Error reading JSON file.")
         return []
     
 def save_students(students):
-
     with open(FILE_NAME, "w") as file:
 
         json.dump(
@@ -43,11 +39,9 @@ def save_students(students):
         )
 
 def add_student(students):
-
     name = input("Enter name: ")
 
     while True:
-
         try:
             age = int(input("Enter age: "))
             if age <= 0:
@@ -59,13 +53,9 @@ def add_student(students):
             print("Please enter valid age only!")
 
     grade = input("Enter grade: ")
-    
     student = Student(name, age, grade)
-
     students.append(student)
-
     save_students(students)
-
     print("Student added successfully!")
 
 def list_students(students):
@@ -75,7 +65,6 @@ def list_students(students):
         return
 
     print("\nStudent Records:")
-
     for i, student in enumerate(students, start=1):
 
         print(
@@ -88,11 +77,8 @@ def search_student(students):
 
     try:
         search_age = int(input("Enter age to search: "))
-
         found = False
-
         for student in students:
-
             if student.age == search_age:
 
                 print(
@@ -102,7 +88,6 @@ def search_student(students):
                 )
 
                 found = True
-
         if not found:
             print("No students found with this age.")
 
