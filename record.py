@@ -15,7 +15,6 @@ class Student:
 
 FILE_NAME = "students.json"
 
-
 def load_students():
     try:
         with open(FILE_NAME, "r") as file:
@@ -29,20 +28,17 @@ def load_students():
         print("Error reading JSON file.")
         return []
 
-
 def save_students(students):
     with open(FILE_NAME, "w") as file:
         json.dump([student.to_dict() for student in students], file, indent=4)
 
-
 def add_student(students):
-
     try:
         name = input("Enter name: ")
         age = int(input("Enter age: "))
         grade = input("Enter grade: ")
 
-
+        
         student = Student(name, age, grade,)
 
         students.append(student)
@@ -54,9 +50,7 @@ def add_student(students):
     except ValueError:
         print("Invalid age! Please enter a number.")
 
-
 def list_students(students):
-
     if not students:
         print("No student records found.")
         return
@@ -64,25 +58,18 @@ def list_students(students):
     print("\nStudent Records:")
 
     for i, student in enumerate(students, start=1):
-
         print(
             f"{i}. Name: {student.name}, "
             f"Age: {student.age}, "
             f"Grade: {student.grade}, "
-           
-        )
-
+   )
 def search_student(students):
-
     try:
         search_age = int(input("Enter age to search: "))
-
         found = False
 
         for student in students:
-
             if student.age == search_age:
-
                 print(
                     f"Found -> Name: {student.name}, "
                     f"Age: {student.age}, "
@@ -90,27 +77,23 @@ def search_student(students):
                 )
 
                 found = True
-
         if not found:
             print("No students found with this age.")
 
     except ValueError:
         print("Please enter valid age!")
-
-
 def main():
 
     students = load_students()
 
-    while True:
-
+    while True
         print("\n--- Student Record System ---")
         print("1. Add Student")
         print("2. List Students")
         print("3. Search Student By Age")
         print("4. Exit")
 
-        choice = input("Enter your choice: ")
+       choice = input("Enter your choice: ")
 
         if choice == "1":
             add_student(students)
@@ -127,6 +110,5 @@ def main():
 
         else:
             print("Invalid choice! Try again.")
-
 
 main()
